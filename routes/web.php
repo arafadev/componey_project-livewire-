@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 // require __DIR__.'/auth.php';
 
-
+// Site Routes
 Route::prefix('/')->name('front.')->group(function () {
     Route::view('', 'front.index')->name('index');
     Route::view('about', 'front.about')->name('about');
@@ -28,4 +28,10 @@ Route::prefix('/')->name('front.')->group(function () {
     Route::view('services', 'front.services')->name('services');
     Route::view('team', 'front.team')->name('team');
     Route::view('testimonial', 'front.testimonial')->name('testimonial');
+});
+
+// Admins Routes
+Route::prefix('/admin')->name('admin.')->group(function () {
+    Route::view('', 'admin.index')->name('index');
+    Route::view('login', 'admin.auth.login')->name('login');
 });
