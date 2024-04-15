@@ -1,29 +1,26 @@
 @extends('admin.master')
-@section('title', 'Skills')
-@section('skills_active', 'active')
+@section('title', 'Counters')
+@section('counters_active', 'active')
 @section('content')
     <div class="content-wrapper">
         <!-- Content -->
 
         <div class="container-xxl flex-grow-1 container-p-y">
             <div class="mb-3">
-                <h4 class="fw-bold py-3 mb-4 d-inline">Skills</h4>
-
-                @livewire('admin.skills.skills-create')
-                <!-- Button trigger modal -->
+                <h4 class="fw-bold py-3 mb-4 d-inline">Counters</h4>
+                @livewire('admin.counters.counters-create')
                 <button type="button" class="btn btn-sm btn-primary mb-2 mx-2" data-bs-toggle="modal"
                     data-bs-target="#createModel">
-                    Add Skill
+                    Add Counter
                 </button>
             </div>
             <div class="card mb-4">
                 <div class="card-body">
-                    @livewire('admin.skills.skills-data')
+                    @livewire('admin.counters.counters-data')
                 </div>
             </div>
-            @livewire('admin.skills.skills-update')
-            @livewire('admin.skills.skills-delete')
-            @livewire('admin.skills.skills-show')
+            @livewire('admin.counters.counters-update')
+            @livewire('admin.counters.counters-delete')
             <!-- / Content -->
             <div class="content-backdrop fade"></div>
         </div>

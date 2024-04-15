@@ -8,9 +8,6 @@ use Livewire\Component;
 class SkillsCreate extends Component
 {
     public $name, $progress;
-
-  
-
     public function rules()
     {
         return [
@@ -20,8 +17,6 @@ class SkillsCreate extends Component
 
         ];
     }
-
-
     public function submit()
     {
         $data = $this->validate();
