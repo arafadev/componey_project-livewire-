@@ -17,7 +17,7 @@
                             Close
                         </button>
                         <button type="submit" class="btn btn-primary">
-                            @include('admin.loading', ['buttonName' => 'Add Skill'])
+                            @include('admin.loading', ['buttonName' => 'Add Service'])
                         </button>
                     </div>
                 </form>
