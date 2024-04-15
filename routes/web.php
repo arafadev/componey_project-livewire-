@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -32,6 +33,12 @@ Route::prefix('/')->name('front.')->group(function () {
 
 // Admins Routes
 Route::prefix('/admin')->name('admin.')->group(function () {
-    Route::view('', 'admin.index')->name('index');
-    Route::view('login', 'admin.auth.login')->name('login');
+
+    Route::middleware('admin')->group(function () {
+        Route::view('', 'admin.index')->name('index');
+        Route::view('settings', 'admin.settings.index')->name('settings');
+        Route::view('skills', 'admin.skills.index')->name('skills');
+    });
+    Route::view('login', 'admin.auth.login')->Middleware('guest:admin')->name('login');
+
 });
