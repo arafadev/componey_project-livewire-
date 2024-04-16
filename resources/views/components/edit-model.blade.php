@@ -16,7 +16,7 @@
                         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                             Close
                         </button>
-                        <button type="submit" class="btn btn-primary"> @include('admin.loading', ['buttonName' => 'Update Counter'])
+                        <button type="submit" class="btn btn-primary"> @include('admin.loading', ['buttonName' => 'Update'])
                         </button>
                     </div>
                 </form>
