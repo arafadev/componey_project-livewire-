@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Admin\Services;
 
+use App\Livewire\Admin\Messages\MessagesData;
 use App\Models\Service;
 use Livewire\Component;
 
@@ -17,6 +18,8 @@ class ServicesShow extends Component
         $this->name = $record->name;
         $this->description = $record->description;
         $this->dispatch('showModelToggle');
+        $this->dispatch('refreshData')->to(MessagesData::class);
+
     }
     public function render()
     {
